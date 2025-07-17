@@ -50,3 +50,10 @@ GitHub Repository <-- pull or clone -- Local Repository
 - 변경 사항을 안전하게 실행 취소할 수 있도록 도와주는 순방향 실행 취소 작업
 - commit 기록에서 commit을 삭제하거나 분리하는 대신, 지정된 변경 사항을 반전시키는 새 commit을 생성
 - git에서 기록이 손실되는 것을 방지하며 기록의 무결성과 협업의 신뢰성을 높임
+
+`git reset [옵션] [commit 해쉬값]` : 특정 commit으로 되돌아가는 작업
+`--soft` : 삭제된 commit의 기록을 staging area에 남김
+`--mixed` : 삭제된 commit의 기록을 working directory에 남김(defalt)
+`--hard` : 삭제된 commit의 기록을 남기지 않음
+
+`git reflog` : HEAD가 이전에 가리켰던 모든 commit을 보여줌, reset의 --hard 옵션을 통해 지워진 commit도 조회하여 복구 가능
